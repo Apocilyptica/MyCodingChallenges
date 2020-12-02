@@ -9,7 +9,10 @@
   - while
   - do-while
   - for-each
+  #### Codewars
 - spinWords
 - Bit Counter
 - Credit Card Mask
-- Testing
+- Growth of a Population
+- Detect Pangram
+- Build a pile of Cubes
