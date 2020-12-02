@@ -16,3 +16,4 @@
 - Growth of a Population
 - Detect Pangram
 - Build a pile of Cubes
+- The Supermarket Queue
