@@ -19,4 +19,5 @@
 - The Supermarket Queue
 - Is a Number Prime
 - Sum of Digits / Digital Root 6kyu 40min
-- Rectangle into Squares 6kyu
+- Rectangle into Squares 6kyu 60min
+- Scramblies 5kyu

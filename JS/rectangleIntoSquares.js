@@ -46,12 +46,29 @@
 // starting square will always be the smallest between lng and wdth ie 5x3 will start with a 3x3 square so now you have a 2x3 rectangle then a 2x2 square comes out so you left with a 2x1 rectangle the another 1x1 comes out leaving just a 1x1 left 
 
 function sqInRect(lng, wdth){
+    if (lng == wdth)
+        return null
     rectArray = [lng, wdth]
+    squareArray = []
     for(var i = 0; lng != wdth; i ++) {
-        var squareArray = Array.push(Math.min(...rectArray))
-        console.log(squareArray);
-        return squareArray
-    }
+        squareArray.push(Math.min(...rectArray))
+        rectArray.splice(rectArray.indexOf(Math.max(...rectArray)), 1, (Math.max(...rectArray)) - (Math.min(...rectArray)))
+        if (squareArray[squareArray.length - 1] == 0) {
+            squareArray.pop()
+            return squareArray
+        }
+    } return squareArray
   }
 
-  console.log(sqInRect(3, 5));
+  console.log(sqInRect(20, 14));
+
+//  Best Practice
+function sqInRect(lng, wdth){
+    let arr = []
+    if(lng === wdth) return null
+    while(lng > 0 && wdth > 0){
+      arr.push(lng > wdth ? wdth : lng)
+      lng > wdth ? lng -= wdth : wdth -= lng
+    }
+    return arr
+  }
