@@ -17,3 +17,6 @@
 - Detect Pangram
 - Build a pile of Cubes
 - The Supermarket Queue
+- Is a Number Prime
+- Sum of Digits / Digital Root 6kyu 40min
+- Rectangle into Squares 6kyu

@@ -8,8 +8,8 @@
 // in order to do this I need a for loop
 
 function printNumber(end) {
-    let start = 1
-    for(let i = start; i <= end; i++) {
+    let start = 0
+    for(let i = start; i < end; i++) {
         console.log(i);
     }
 }
