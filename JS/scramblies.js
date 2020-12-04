@@ -18,8 +18,14 @@
 // need to refactor current time 1hr 45min
 // start over tmrw
 
+// Execution Timed Out (1200 ms)
 function scramble(str1, str2) {
-    
+    for (var i = 0; str2.length > i; i++) {
+        if(str1.indexOf(str2[i]) < 0) {
+            return false
+        }   str1 = str1.replace(str2[i], '')
+    } return true
 }
 
-console.log(scramble('cedewaraaossoqqyt','codewars'));
+
+console.log(scramble("kateas", "steaks"));
