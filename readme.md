@@ -20,4 +20,8 @@
 - Is a Number Prime
 - Sum of Digits / Digital Root 6kyu 40min
 - Rectangle into Squares 6kyu 60min
-- Scramblies 5kyu
+- Scramblies 5kyu 3hr
+  - new ranking of 6kyu
+- IP Validation 6kyu 30min
+- Break camelCase 6kyu 90min
+- String incrementer 5kyu 60min
