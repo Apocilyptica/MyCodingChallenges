@@ -27,3 +27,4 @@
 - String incrementer 5kyu 60min
 - Regex Password Validation 5kyu 40min
 - Sum Strings as Numbers 4kyu 70min
+- A Chain adding Function 5 kyu 95min / need more practice on Curry
