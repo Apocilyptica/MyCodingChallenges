@@ -25,3 +25,5 @@
 - IP Validation 6kyu 30min
 - Break camelCase 6kyu 90min
 - String incrementer 5kyu 60min
+- Regex Password Validation 5kyu 40min
+- Sum Strings as Numbers 4kyu 70min
