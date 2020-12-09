@@ -28,3 +28,5 @@
 - Regex Password Validation 5kyu 40min
 - Sum Strings as Numbers 4kyu 70min
 - A Chain adding Function 5 kyu 95min / need more practice on Curry
+- +1 Array 6kyu 60min
+- Strings Mix 4kyu 3hr 10min
