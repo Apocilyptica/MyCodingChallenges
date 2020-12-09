@@ -29,4 +29,10 @@
 - Sum Strings as Numbers 4kyu 70min
 - A Chain adding Function 5 kyu 95min / need more practice on Curry
 - +1 Array 6kyu 60min
+  - new ranking of 5kyu
 - Strings Mix 4kyu 3hr 10min
+- Build Tower 6kyu 10min
+
+### Python
+
+- Who likes it? 6kyu need to redo my course on python from Bottega
