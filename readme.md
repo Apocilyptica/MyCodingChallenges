@@ -32,7 +32,7 @@
   - new ranking of 5kyu
 - Strings Mix 4kyu 3hr 10min
 - Build Tower 6kyu 10min
-- Maximun subarray sum 5kyu
+- Maximun subarray sum 5kyu 120min
 
 ### Python
 
