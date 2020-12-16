@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "learn nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apocilyptica/nodejs.git"
+  },
+  "author": "James Jager",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Apocilyptica/nodejs/issues"
+  },
+  "homepage": "https://github.com/Apocilyptica/nodejs#readme"
+}
