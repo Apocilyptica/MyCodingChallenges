@@ -29,44 +29,72 @@
 
 // An array of strings formatted like LevelName: XX.XX%.
 
+function codingScoreReportPercent(scores) {
+  //  return string
+}
 
 function levelName(position, name, lowScore, highScore, count, percentage) {
-    this.position = position
-    this.name = name
-    this.lowScore = lowScore
-    this.highScore = highScore
-    this.count = count
-    this.percentage = percentage
+  this.position = position;
+  this.name = name;
+  this.lowScore = lowScore;
+  this.highScore = highScore;
+  this.count = count;
+  this.percentage = percentage;
 }
 
 function codingScoreReportPercent(scores) {
-    poor = new levelName(5, 'Poor', 300, 599, 0, 0)
-    fair = new levelName(4, 'Fair', 600, 699, 0, 0)
-    good = new levelName(3, 'Good', 700, 749, 0, 0)
-    excellent = new levelName(2, 'Excellent', 750, 799, 0, 0)
-    elite = new levelName(1, 'Elite', 800, 1000, 0, 0)
+  poor = new levelName(5, "Poor", 300, 599, 0, 0);
+  fair = new levelName(4, "Fair", 600, 699, 0, 0);
+  good = new levelName(3, "Good", 700, 749, 0, 0);
+  excellent = new levelName(2, "Excellent", 750, 799, 0, 0);
+  elite = new levelName(1, "Elite", 800, 850, 0, 0);
 
-    levels = [poor, fair, good, excellent, elite]
+  levels = [poor, fair, good, excellent, elite];
 
-    levels.forEach((level) => {
-        for(var i = 0; i < scores.length; i++) {
-            if(scores[i] >= level.lowScore && scores[i] <= level.highScore) level.count++
-        } if(level.count > 0) level.percentage = (level.count / scores.length * 100).toFixed(2)
-    })
-    
-    levels.sort(function(a, b) {
-        return b.percentage - a.percentage || a.position - b.position
-    })
-
-    finalArray =[]
-
-    for(var i = 0; i < levels.length; i++) {
-        if(levels[i].count > 0) {
-            finalArray.push(levels[i].name + ': ' + levels[i].percentage + '%')
-        }
+  levels.forEach((level) => {
+    for (var i = 0; i < scores.length; i++) {
+      if (scores[i] >= level.lowScore && scores[i] <= level.highScore)
+        level.count++;
     }
+    if (level.count > 0)
+      level.percentage = ((level.count / scores.length) * 100).toFixed(2);
+  });
 
-    return finalArray
+  levels.sort(function (a, b) {
+    return b.percentage - a.percentage || a.position - b.position;
+  });
+
+  finalArray = [];
+
+  for (var i = 0; i < levels.length; i++) {
+    if (levels[i].count > 0) {
+      finalArray.push(levels[i].name + ": " + levels[i].percentage + "%");
+    }
+  }
+
+  return finalArray;
 }
 
-console.log(codingScoreReportPercent([330,723,730,823,951,326,764,821,524,376,467,721,798,801,465,415,675,624,653]));
+console.log(
+  codingScoreReportPercent([
+    330,
+    723,
+    730,
+    823,
+    850,
+    326,
+    764,
+    821,
+    524,
+    376,
+    467,
+    721,
+    798,
+    801,
+    465,
+    415,
+    675,
+    624,
+    653,
+  ])
+);

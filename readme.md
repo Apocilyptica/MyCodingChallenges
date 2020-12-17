@@ -34,6 +34,7 @@
 - Build Tower 6kyu 10min
 - Maximun subarray sum 5kyu 120min
 - Some Egyptian Fractions 5kyu 180min
+- First Variation on Caesar Cipher 5kyu 120min
 
 ### Python
 
