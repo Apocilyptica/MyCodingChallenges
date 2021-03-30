@@ -23,21 +23,60 @@
 // Must use Object.defineProperty
 
 // Let's make a Cat constructor!
-var Cat = function (name, weight) {
-  try {
-    if (name != undefined && weight != undefined) {
-      this.name = name;
-      this.weight = weight;
-    } else {
-      throw new Error();
+var Cat = (function () {
+  return class CatObj {
+    constructor(name, weight) {
+      try {
+        if (name != undefined && weight != undefined) {
+          this.name = name;
+          this.weight = weight;
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        console.log("Cat must have 1st have a valid name parameter and 2nd a weight parameter");
+      }
     }
-  } catch (err) {
-    console.log("Cat must include a name and a weight ie. new Cat('fluffy', 15)");
-  } finally {
-    console.log("Do stuff");
-  }
-};
+  };
+})();
 
-fluffy = new Cat("fluffy", 15);
+fluffy = new Cat("fluffy");
+fluffy.name = "Kipper";
 
 console.log(fluffy);
+
+// Answer
+var Cat = (function () {
+  var cats = {
+    count: 0,
+    totalWeight: 0,
+    avgWeight: 0,
+  };
+
+  function Cat(name, weight) {
+    if (!name || !weight) {
+      throw new Error("Both `name` and `weight` should be provided");
+    }
+    cats.count++;
+    this.name = name;
+
+    Object.defineProperty(this, "weight", {
+      get: function () {
+        return this._weight || 0;
+      },
+      set: function (val) {
+        cats.totalWeight = cats.totalWeight - this.weight + val;
+        cats.avgWeight = cats.totalWeight / cats.count;
+        return (this._weight = val);
+      },
+    });
+
+    this.weight = weight;
+  }
+
+  Cat.averageWeight = function () {
+    return cats.avgWeight;
+  };
+
+  return Cat;
+})();
